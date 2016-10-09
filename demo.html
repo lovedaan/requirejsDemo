@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" data-main="js/main" src="lib/requirejs/require.js"></script>
+        <script type="text/javascript">
+             /*
+             1.首先引入requirejs
+             2.require(调用模块),define(定义模块),require.config(配置模块);
+             3.通过在引用requirejs的标签上加一个自定义属性data-main,载入项目入口文件
+             注意：我们写了data-main属性载入入口文件，那么其他文件就是相对这个js入口文件的路径，
+                如果不写，用这种方式载入<script type="text\/javascript" src="js\/main.js"><\/script>
+                那么其他文件就是相对当前html文件的路径
+              */
+        </script>
+    </head>
+    <body>
+        <input type="button" value="按我" id="btn" />
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            #box{
+                width: 200px;
+                height: 200px;
+                background-color:red;
+                position: absolute;
+                top:200px;
+            }
+        </style>
+        <script type="text/javascript" data-main="js/drag" src="lib/requirejs/require.js"></script>
+        <!-- <script type="text/javascript">
+             window.onload = function () {
+                 var oBox = document.getElementById('box');
+                 var disX = 0, disY = 0;
+        
+                 oBox.onmousedown = function (ev) {
+                     var ev = ev || event;
+        
+                     disX = ev.clientX - this.offsetLeft;
+                     disY = ev.clientY - this.offsetTop;
+        
+                     document.onmousemove = function (ev) {
+                         var ev = ev || event;
+        
+                         oBox.style.left = ev.clientX - disX + 'px';
+                         oBox.style.top = ev.clientY - disY + 'px';
+                     }
+        
+                     document.onmouseup = function () {
+                         document.onmousemove = document.onmouseup = null;
+                     }
+        
+                     return false;
+                 }
+             }
+        </script> -->
+        <script type="text/javascript">
+            //配置引入jquery
+             require.config({
+                paths : {
+                    jquery : '../lib/jquery/dist/jquery.min'
+                }
+             });
+        </script>
+    </head>
+    <body>
+        <div id="box"></div>
+        <input type="button" value="点击" id="btn" />
+    </body>
+</html>
